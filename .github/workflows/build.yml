@@ -52,7 +52,7 @@ jobs:
       if: github.event_name != 'pull_request'
       with:
         registry: quay.io
-        username: sanketha-cr
+        username: sanketha_cr
         password: ${{ secrets.WXPE_QUAY_TOKEN }}
 
     - name: "Set build cache target"
