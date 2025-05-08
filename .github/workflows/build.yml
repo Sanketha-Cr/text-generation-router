@@ -25,7 +25,7 @@ jobs:
     env:
       CACHE_IMAGE: "ghcr.io/ibm/text-gen-router:build-cache"
       CACHE_REGISTRY: "ghcr.io"
-      QUAY_REPOSITORY: "quay.io/wxpe/text-gen-router"
+      QUAY_REPOSITORY: "quay.io/sanketha_cr/cloudpak/text-gen-router"
 
     permissions:
       packages: write
@@ -52,7 +52,7 @@ jobs:
       if: github.event_name != 'pull_request'
       with:
         registry: quay.io
-        username: wxpe+github_pusher_bot
+        username: sanketha-cr
         password: ${{ secrets.WXPE_QUAY_TOKEN }}
 
     - name: "Set build cache target"
